@@ -1,19 +1,16 @@
-import time
+# Importamos la funciona para imprimir si es verdadero o falso
 from True_o_False import true_false
 
-start_time = time.time()
-
+# Funcion que le pasamos como parametro una lista de numeros y el valor que queremos buscar
 def busqueda_secuencial(lista, valor):
+# Recorremos la lista con un for
     for elemento in lista:
+# Si el elemento recorrido de la lista es igual a el valor que pasamos como parametros entonces es true
         if elemento == valor:
+# Si es true entonces pasamos true y el valor a la otra funcion
             true_false(True, valor)
+#Return finaliza la función cuando encontramos el valor
             return
+# Si es false entonces pasamos false y el valor a la otra funcion
     true_false(False, valor)
 
-# busqueda_secuencial([1,2,3,4,5,6,7,8,9,10], 10)
-# busqueda_secuencial([1,2,3,4,5,6,7,8,9,10], 11)
-
-# end_time = time.time()
-# execution_time = end_time - start_time
-
-# print("Tiempo de ejecución: {:.5f} segundos".format(execution_time))
